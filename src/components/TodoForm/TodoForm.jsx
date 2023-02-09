@@ -5,6 +5,7 @@ export const TodoForm = ({ onAddToDo }) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const actions = { title: setTitle, description: setDescription };
+
   const firstToDo = useRef(null);
 
   useEffect(() => {
@@ -22,6 +23,7 @@ export const TodoForm = ({ onAddToDo }) => {
     onAddToDo(toDo);
     handleReset();
   };
+
   const handleReset = () => {
     Object.values(actions).forEach(item => {
       item('');

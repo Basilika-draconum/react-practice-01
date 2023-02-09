@@ -11,6 +11,7 @@ export const Todos = () => {
   const onAddToDo = toDo => {
     setTodos([toDo, ...todos]);
   };
+
   const onChecked = id => {
     setTodos(
       todos.map(item =>
@@ -18,6 +19,7 @@ export const Todos = () => {
       )
     );
   };
+
   return (
     <div>
       <TodoForm onAddToDo={onAddToDo} />
